@@ -1,0 +1,151 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  color: #1f2937;             
+  background: #f3f4f6;        
+}
+
+
+a { color: #2563eb; text-decoration: none; } /* baraye inke range link ha abi bemune */
+a:hover { text-decoration: underline; } /*baraye inke zire link ha khat bendaze*/
+
+
+.page {
+  max-width: 800px;           /* maxzimum chizi ke arz mitune dashte bashe */
+  margin: 40px auto;
+  background: #fff;           
+  padding: 0 32px 32px;       
+  border: 2px solid black;
+}
+
+/*Header band */
+.personal-info {
+  display: grid;
+  grid-template-columns: 1fr auto;  /* tedade sotun ha,left info, right contacts */
+  gap: 24px; /*fasle beine sutun ha*/
+  background: #e0f2fe;            
+  border-bottom: 2px solid #93c5fd; 
+  padding: 24px 32px;
+  margin: 0 -32px 24px;             
+}
+/* Left side */
+.personal-info h1 {
+  margin: 0 0 2px 0;                
+  font-size: 28px;
+  letter-spacing: .4px;
+}
+.job {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #6a6e79;                   
+}
+.description {
+  margin: 0;
+  font-size: 14px;
+  color: #6a6e79;
+  max-width: 380px;
+}
+
+/* Right side (contacts) */
+.contacts {
+  text-align: right;
+  font-size: 14px; 
+  
+}
+.contacts p {
+  margin: 0;
+}
+
+/* Columns layout*/
+.columns {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 32px;
+}
+
+/*headings*/
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 4px;
+}
+h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 12px 0 6px;
+  letter-spacing: .8px;
+  color: black;
+}
+
+/*Helper classes*/
+
+.edu-meta {
+  display: flex;                /* put children on one line */
+  justify-content: space-between; /* left school, right place */
+  font-size: 14px;
+  margin: 4px 0 8px;
+  color: rgb(44, 159, 204);               /* blue text like in the picture */
+  font-weight: 600;
+}
+
+.edu-meta .school { text-align: left; }
+.edu-meta .place  { text-align: right; }
+
+.skills-list {
+  list-style: none;              /* remove bullets */
+  padding: 0;
+  margin: 8px 0 16px;
+  display: flex;                 /* show items side by side */
+  flex-wrap: wrap;               /* allow wrapping to next line */
+  gap: 10px;                     /* space between badges */
+}
+
+.skills-list li {
+  background: rgb(44, 159, 204);           /* solid blue background */
+  color: #fff;                   /* white text */
+  padding: 6px 14px;             /* inner spacing */
+  border-radius: 20px;           /* pill shape */
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;           /* prevent text breaking */
+}
+
+/* Lists */
+ul { margin: 6px 0 12px 20px; padding: 0; }
+li { margin: 4px 0; font-size: 12px; color: #6a6e79;}
+
+/*footer*/
+.final-info{
+  background: #e0f2fe;              /* same light blue as header */
+  border-top: 2px solid #93c5fd;    /* same stronger blue border */
+  padding: 0 32px;
+  margin: 20px -32px -32px -32px;   /* stretch across the full page container */
+  text-align: left;
+  font-size: 14px;
+  color: #1f2937;
+  display: grid;
+  grid-template-columns: 1fr auto;  /* tedade sotun ha,left info, right contacts */
+}
+
+.final-info h2 {
+  margin-left: 0;
+  text-align: left;
+}
+.final-info .contacts{
+  margin-top: 30px;
+}
+
+/* ===== 6) Responsive (mobile view) ===== */
+@media (max-width: 768px) {
+  .personal-info {
+    grid-template-columns: 1fr;      /* stack left + right */
+    text-align: left;
+  }
+  .contacts { text-align: left; margin-top: 12px; }
+  .columns { grid-template-columns: 1fr; }  /* single column */
+}
